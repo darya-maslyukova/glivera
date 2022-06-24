@@ -1,0 +1,118 @@
+.page-header {
+  background: $midnight;
+  color: $white;
+  border-top: 4px solid $azure-radiance;
+
+  a {
+    color: $white;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    &.active {
+      color: $azure-radiance;
+    }
+  }
+
+  &-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid transparentize($midnight-blue, 0.7);
+    min-height: 70px;
+  }
+
+  &-bottom {
+    border-top: 1px solid transparentize($midnight-blue, 0.7);
+    overflow: scroll;
+  }
+
+  &__menu {
+
+    &-top {
+      display: flex;
+      align-items: center;
+
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+
+      & > li {
+        margin-left: 45px;
+
+        @include media-breakpoint-down(lg) {
+          margin-left: 35px;
+        }
+
+        &:last-child {
+
+          & > a {
+            border: 1px solid $white;
+            border-radius: 16px;
+            padding: 5.5px 15px;
+
+            &:hover {
+              background: $azure-radiance;
+              border-color: $azure-radiance;
+            }
+          }
+        }
+      }
+    }
+
+    &-bottom {
+      display: flex;
+      align-items: flex-end;
+      white-space: nowrap;
+
+      & > li {
+
+        a {
+          padding: 22px 19px 24px;
+          position: relative;
+          display: block;
+
+          @include media-breakpoint-down(md) {
+            font-size: 18px;
+            font-weight: bold;
+          }
+
+          &:before {
+            content: '';
+            position: absolute;
+            height: 0;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            background: $azure-radiance;
+            transition: 300ms ease-out;
+          }
+
+          &:hover,
+          &.active {
+
+            &:before {
+              height: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-content {
+    padding-top: 53px;
+    padding-bottom: 54px;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+
+    p {
+      font-size: 48px;
+      font-family: $f-secondary;
+      line-height: 58px;
+      max-width: 950px;
+    }
+  }
+}
