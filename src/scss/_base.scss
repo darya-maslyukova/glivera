@@ -6,73 +6,72 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-}
 
-.socials {
-  display: flex;
+  &.icon--attention {
+    background-image: url("../images/attention.svg");
+    width: 22px;
+    height: 19px;
+  }
 
-  & > a {
-    width: 32px;
-    height: 32px;
-    display: block;
-    border-radius: 50%;
-    background-image: url("../images/social-icons.svg");
-    background-repeat: no-repeat;
-    margin-right: 15px;
+  &.icon--close {
+    background-image: url("../images/close.svg");
+    width: 14px;
+    height: 14px;
+  }
 
-    &:last-child {
-      margin-right: 0;
-    }
+  &.icon--comment {
+    background-image: url("../images/comment.svg");
+    width: 11px;
+    height: 11px;
+  }
 
-    &.fb {
-      background-position: 0 0;
-    }
-
-    &.in {
-      background-position: -46px 0;
-    }
-
-    &.g-plus {
-      background-position: -92px 0;
-    }
-
-    &.twitter {
-      background-position: -139px 0;
-    }
+  &.icon--search {
+    background-image: url("../images/search.svg");
+    width: 20px;
+    height: 20px;
   }
 }
 
-.link-border {
-  min-width: 176px;
-  height: 32px;
-  border-radius: 16px;
-  font-size: 16px;
-  color: $azure-radiance;
-  border: 1px solid $azure-radiance;
+//----- Buttons
+
+.btn {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
   text-align: center;
-  line-height: 28px;
-  white-space: nowrap;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: $apple;
+  height: 40px;
+  border-radius: 30px;
+  border: 1px solid $apple;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 20px;
+  transition: 300ms ease-in-out;
+
+  &:focus {
+    outline: none;
+  }
+
+  &--bg {
+    background: linear-gradient(0deg, $apple 0%, $pastel-green 100%);
+    color: $white;
+    border: 0;
+    transition: none;
+  }
 
   &:hover {
-    background: $azure-radiance;
+    background: $apple;
     color: $white;
   }
-}
 
-.link-bg {
-  min-width: 280px;
-  height: 50px;
-  text-align: center;
-  font-size: 24px;
-  color: $white;
-  background: $azure-radiance;
-  line-height: 50px;
-  border-radius: 25px;
-  display: inline-block;
-  border: 1px solid $azure-radiance;
+  &--lg {
+    min-width: 160px;
+  }
 
-  &:hover {
-    background: $white;
-    color: $azure-radiance;
+  &--xl {
+    min-width: 260px;
   }
 }

@@ -1,0 +1,112 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Glivera
+        link(rel="stylesheet", href="css/core.min.css")
+    body
+        .wrapper
+            //  Notification
+            .notification
+                .container
+                    ul.notification__list
+                        li.notification__list__item.notification__list__item--color
+                            .notification__icon
+                                i.icon.icon--attention
+                                | You are not protected
+                        li.notification__list__item Your IP Address: 107.3.176.194
+                        li.notification__list__item Your ISP: Comcast Cable
+                        li.notification__list__item
+                            a(href="#") Learn More ›
+                    a(href="#").close
+                        i.icon.icon--close
+            //  End Notification
+
+            .container
+                // Header
+                header.header
+                    a(href="/").logo
+                            | Company Name
+                    ul.top-menu
+                        li.top-menu__item.top-menu__item--has-submenu
+                            a(href="#") Why Us
+                        li.top-menu__item
+                            a(href="#") VPN Apps
+                        li.top-menu__item.top-menu__item--has-submenu
+                            a(href="#") Support
+                        li.top-menu__item.top-menu__item--has-submenu
+                            a(href="#") Resources
+                    .header-btns
+                        button(type="button").btn Log In
+                        button(type="button").btn.btn--bg.btn--lg Get Started
+                // End Header
+
+                main.blog.inner-container
+                    // Main Post
+                    .blog-post.blog-post--main
+                        .blog-post__images
+                            .blog-post__image.image-mobile(style="background-image: url('../pictures/post-main.png')")
+                            .blog-post__image.image-tablet(style="background-image: url('../pictures/post-main@2x.png')")
+                            .blog-post__image(style="background-image: url('../pictures/post-main@3x.png')")
+
+                        .blog-post__article
+                            .blog-post__title TV Addons: Legal battle against Canadian media giants demonstrates severe consequences facing developers accused of copyright infringement
+                            .blog-post__info
+                                |
+                                |
+                                span.info-author Danica Sergison
+                                |
+                                |
+                                span.info-date | JUL 08, 2018
+                                nav.info-tags
+                                  - const arr = ['Copyright', 'News', 'Open Source', 'Privacy']
+
+                                      each val, index in arr
+                                        a(href="#")= val
+                                        if index !== arr.length - 1
+                                          | ,
+                                .info-comments
+                                    i.icon.icon--comment
+                                    | 0
+                    // End Main Post
+
+                    // Tags Filter
+                    .blog-filter
+                        .blog-filter__tags
+                            .tags-title Tags:
+                            nav.tags-nav
+                              each val in ['bitcoin', 'bittorrent', 'irc', 'news', 'privacy', 'programming', 'security']
+                                  a(href="#")= val
+                        .blog-filter__links
+                            a(href="#") Team
+                            a(href="#") Contact
+                    // End Tags Filter
+
+                    //  Blog Posts
+                    .two-columns.blog-posts
+
+                        // ---------------- Left Column
+                        .two-columns__left
+                            h2 Recent posts
+
+                            include mixins/post
+                            +post('post-1',  'The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises', 'Derek Zimmer', 'JUL 25, 2018', ['Governments', 'Networking', 'Open Source', 'Privacy', 'Security'])
+                            +post('post-2',  'How to get cheaper flights using a VPN', 'Jayson', 'JUL 24, 2018', ['Guides'])
+                            +post('post-3',  'Net Neutrality was repealed, but the fight is far from over', 'Chris Miller', 'JUL 22, 2018', ['Governments', 'Net Neutrality', 'News'])
+                            +post('post-1',  'The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises', 'Derek Zimmer', 'JUL 25, 2018', ['Governments', 'Networking', 'Open Source', 'Privacy', 'Security'])
+                            +post('post-2',  'How to get cheaper flights using a VPN', 'Jayson', 'JUL 24, 2018', ['Guides'])
+                            +post('post-3',  'Net Neutrality was repealed, but the fight is far from over', 'Chris Miller', 'JUL 22, 2018', ['Governments', 'Net Neutrality', 'News'])
+
+                            .blog-post__btn
+                                button(type="button").btn.btn--xl Older Posts
+                        // ---------------- Right Column
+                        .two-columns__right
+                            .search
+                                input(type="search" value="Search blog")
+                                button(type="button")
+                                    i.icon.icon--search
+
+                    //  End Blog Posts
+
+            footer.footer

@@ -1,0 +1,50 @@
+.notification {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: $regent-gray;
+  font-size: 12px;
+  background: $charade;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+
+  .close {
+    position: absolute;
+    top: 13px;
+    right: 21px;
+  }
+
+  &__icon {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+
+    .icon {
+      margin-right: 5px;
+    }
+  }
+
+  a {
+    color: $white;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    li + li {
+      margin-left: 32px;
+    }
+
+    &__item {
+
+      &--color {
+        color: $pizazz;
+      }
+    }
+  }
+}

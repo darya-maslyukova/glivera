@@ -1,5 +1,5 @@
 const gulp = require('gulp'),
-  sass = require('gulp-sass')(require('sass'));
+  sass = require('gulp-sass')(require('sass')),
   postcss = require('gulp-postcss'),
   autoprefixer = require('autoprefixer'),
   cssnano = require('cssnano'),
@@ -10,7 +10,8 @@ const gulp = require('gulp'),
   uglify = require('gulp-uglify'),
   concat = require('gulp-concat'),
   babel = require('gulp-babel'),
-  pump = require('pump');
+  pump = require('pump'),
+  gulppug = require('gulp-pug');
 
 const browserSync = require('browser-sync').create();
 
@@ -100,14 +101,23 @@ function fonts() {
     );
 }
 
+function pug() {
+  return gulp.src('src/**/*.pug')
+    .pipe(gulppug({
+      pretty: true
+    }))
+    .pipe(gulp.dest('dist'))
+    .pipe(browserSync.stream({ match: '**/*.html' }))
+}
+
 function watch() {
     browserSync.init({
         server: {
             baseDir: './dist'
         }
     });
-    gulp.watch('src/*.html', copyHtml);
-    gulp.watch('src/templates/*.html', copyHtml);
+    // gulp.watch('src/*.html', copyHtml);
+    gulp.watch('src/**/*.pug', pug);
     gulp.watch('src/images/**/*', imageCopy);
     gulp.watch('src/libs/**/*', copyLibs);
     gulp.watch('src/pictures/*', picturesCopy);
@@ -117,12 +127,12 @@ function watch() {
 
 // Build
 
-const build = gulp.series(gulp.parallel(copyHtml, imageCopy, copyLibs, scripts, style, fonts, picturesCopy));
+const build = gulp.series(gulp.parallel(imageCopy, copyLibs, scripts, style, fonts, picturesCopy, pug));
 
 
 exports.watch = watch;
 exports.style = style;
-exports.copyHtml = copyHtml;
+exports.pug = pug;
 exports.imageCopy = imageCopy;
 exports.copyLibs = copyLibs;
 exports.picturesCopy = picturesCopy;

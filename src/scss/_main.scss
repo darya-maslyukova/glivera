@@ -16,7 +16,7 @@ html {
 body {
   font-size: 1rem;
   font-family: $f-primary;
-  color: $black;
+  color: $charade;
   background-color: $white;
 }
 
@@ -24,99 +24,41 @@ body {
 a {
   transition: 300ms ease-out;
   text-decoration: none;
+  color: $tuna;
+
+  &:hover {
+    color: inherit;
+  }
 }
 
 h1, h2, h2, h3, h4, h5 {
-  font-weight: 400;
-  font-family: $f-secondary;
-}
-
-h1 {
-  font-size: 54px;
-  color: $chathams-blue;
-
-  @include media-breakpoint-down(lg) {
-    font-size: 48px;
-    margin-bottom: 20px;
-  }
-
-  @include media-breakpoint-down(md) {
-    font-size: 34px;
-  }
+  font-weight: 300;
 }
 
 h2 {
-  font-size: 48px;
-  line-height: 58px;
-  color: $chathams-blue;
+  font-size: 32px;
+  line-height: 44px;
+  margin-bottom: 40px;
 }
 
-h3 {
-  font-size: 36px;
-  color: $azure-radiance;
-  margin-bottom: 10px;
-
-  @include media-breakpoint-down(md) {
-    font-size: 28px;
-  }
-}
-
-.page-wrapper {
+.wrapper {
   min-height: -webkit-calc(100vh - 600px);
   min-height: -moz-calc(100vh - 600px);
   min-height: calc(100vh - 600px);
 }
 
-.container {
-  padding-left: 20px;
-  padding-right: 20px;
-
-  @include media-breakpoint-up(md) {
-    max-width: 1195px;
-  }
-
-  @include media-breakpoint-down(md) {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
+.inner-container {
+  max-width: 1200px;
 }
 
-.title-text {
-  text-align: center;
-  font-size: 48px;
-  line-height: 58px;
-  color: $chathams-blue;
-  font-family: $f-secondary;
+.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  padding-bottom: 120px;
 
-  h2 {
-    font-weight: 400;
-
-    @include media-breakpoint-down(md) {
-      font-size: 20px;
-      line-height: 30px;
-    }
-  }
-
-  @include media-breakpoint-down(lg) {
-    max-width: 750px;
-
-    br {
-      display: none;
-    }
-  }
-
-  @include media-breakpoint-down(md) {
-    max-width: 680px;
-    margin: auto;
-  }
-
-  @include media-breakpoint-down(md) {
-    font-size: 20px;
-    line-height: 30px;
-  }
-
-  .link-bg {
-    margin-top: 30px;
+  &__left {
+    padding-right: 60px;
+    border-right: 1px solid $porcelain;
   }
 }
 
