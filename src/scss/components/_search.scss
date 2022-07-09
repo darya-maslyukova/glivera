@@ -1,0 +1,25 @@
+.search {
+  position: relative;
+  border: 1px solid $iron;
+  border-radius: 4px;
+  height: 59px;
+  overflow: hidden;
+  display: flex;
+  margin-bottom: 42px;
+
+  .btn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 59px;
+    width: 58px;
+  }
+
+  input {
+    border: 0;
+    border-radius: 0;
+    width: 100%;
+    padding: 0 20px 0 58px;
+    height: auto;
+  }
+}

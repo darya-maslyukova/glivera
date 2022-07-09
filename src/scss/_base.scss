@@ -30,6 +30,70 @@
     width: 20px;
     height: 20px;
   }
+
+  &.icon--belt {
+    background-image: url("../images/belt.svg");
+    width: 40px;
+    height: 40px;
+  }
+
+  &.icon--recent {
+    background-image: url("../images/recent.svg");
+    width: 40px;
+    height: 40px;
+  }
+
+  &.icon--arrow {
+    background-image: url("../images/arrow.svg");
+    width: 15px;
+    height: 10px;
+  }
+
+  &.icon--fb,
+  &.icon--twitter,
+  &.icon--google,
+  &.icon--in,
+  &.icon--sl,
+  &.icon--youtube {
+    background-image: url("../images/socials.svg");
+    background-size: auto;
+  }
+
+  &.icon--fb {
+    width: 14px;
+    height: 28px;
+    background-position: 0 0;
+  }
+
+  &.icon--twitter {
+    width: 28px;
+    height: 28px;
+    background-position: -45px 0;
+  }
+
+  &.icon--google {
+    width: 34px;
+    height: 28px;
+    background-position: -105px 0;
+  }
+
+  &.icon--in {
+    width: 28px;
+    height: 28px;
+    background-position: -170px -0;
+  }
+
+  &.icon--sl {
+    width: 30px;
+    height: 30px;
+    background-position: -230px 0;
+  }
+
+  &.icon--youtube {
+    width: 42px;
+    height: 29px;
+    background-position: -290px 0;
+  }
 }
 
 //----- Buttons
@@ -49,11 +113,7 @@
   align-items: center;
   justify-content: center;
   padding: 5px 20px;
-  transition: 300ms ease-in-out;
-
-  &:focus {
-    outline: none;
-  }
+  transition: 200ms ease-in-out;
 
   &--bg {
     background: linear-gradient(0deg, $apple 0%, $pastel-green 100%);
@@ -63,9 +123,20 @@
   }
 
   &:hover {
-    background: $apple;
+    background-image: linear-gradient(0deg, #4CB649 0%, #5DDF5A 100%);
     color: $white;
   }
+
+  &--no-styles {
+    padding: 10px;
+    border: 0;
+    height: auto;
+
+    &:hover {
+      background: none;
+    }
+  }
+
 
   &--lg {
     min-width: 160px;
@@ -73,5 +144,73 @@
 
   &--xl {
     min-width: 260px;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+//------- Inputs
+
+input[type="text"],
+input[type="search"] {
+  border: 1px solid $iron;
+  border-radius: 4px;
+  padding: 21px 20px;
+  font-weight: 300;
+  font-size: 18px;
+  height: 59px;
+
+  &::placeholder {
+    font-weight: 300;
+    font-size: 18px;
+    color: $tuna;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+//----------List
+
+ul {
+
+  &.list {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+
+    li {
+      position: relative;
+      padding-left: 8px;
+      margin-bottom: 15px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 2.5px;
+        height: 2.5px;
+        border-radius: 50px;
+        background: $apple;
+        left: 0;
+        top: 7px;
+      }
+    }
+  }
+}
+
+.social-nav {
+  display: flex;
+  align-items: center;
+
+  & > a {
+    display: inline-block;
+  }
+
+  a + a {
+    margin-left: 32px;
   }
 }

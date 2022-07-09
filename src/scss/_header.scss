@@ -5,6 +5,11 @@
   justify-content: space-between;
   align-items: center;
 
+  .logo {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
   &-btns {
 
     .btn + .btn {

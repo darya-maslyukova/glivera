@@ -25,7 +25,7 @@ html(lang="en")
 
             .container
                 // Header
-                header.header
+                header.header.container
                     a(href="/").logo
                             | Company Name
                     ul.top-menu
@@ -102,11 +102,188 @@ html(lang="en")
                                 button(type="button").btn.btn--xl Older Posts
                         // ---------------- Right Column
                         .two-columns__right
-                            .search
-                                input(type="search" value="Search blog")
-                                button(type="button")
+                            form.search
+                                label(for="blog_search")
+                                input(type="search" placeholder="Search blog" name="q" id="blog_search")
+                                button(type="button").btn.btn--no-styles
                                     i.icon.icon--search
+
+                            .sidebar-item
+                                h3.sidebar-item__title
+                                    i.icon.icon--belt
+                                    | Announcements
+                                ul.list
+                                    li
+                                        a(href="#") Upcoming Changes (Live Chat, Less Censorship, More Access)
+                                    li
+                                        a(href="#") New Servers (US Washington DC)
+                                    li
+                                        a(href="#") New Servers (US Denver)
+                                    li
+                                        a(href="#") Open Source: Releasing the PIA iOS Client
+                                    li
+                                        a(href="#") Opera Extension is now available
+
+                            .sidebar-item
+                                h3.sidebar-item__title
+                                    i.icon.icon--recent
+                                    | Popular posts
+                                ul.list
+                                    li
+                                        a(href="#") The Gift of Privacy
+                                    li
+                                        a(href="#") UK High Court Censors Many Links To Popcorn Time: Useless, Dangerous Gesture
+                                    li
+                                        a(href="#") About the PIA Client Security and VPN Security in General
+                                    li
+                                        a(href="#") A Private Net Is Just As Fundamental A Right As Freedom Of Speech
+                                    li
+                                        a(href="#") Wiretapping Today Just Doesn’t Mean What The Word Meant In The 1990s, So Don’t Fall For That Lie
+
+                            .sidebar-item.sidebar-item--no-border
+                                img(src="../pictures/banner.png" alt="Sidebar banner")
+
+                            .sidebar-item.sidebar-item--no-border.mt-5
+                                h3.sidebar-item__title.mb-2 Tag Cloud
+                                img(src="../pictures/tags.png" alt="Sidebar tags")
 
                     //  End Blog Posts
 
+                    //  Sign Up Promotion
+            section.promotion
+                .container.inner-container
+                    h2 Sign up today – 7 day money back guarantee
+                    ul.promotion__list
+                        li.promotion-card
+                            .promotion-card__period Monthly
+                            .promotion-card__price
+                                span.promotion-card__price__cur $
+                                span.promotion-card__price__number 6.95
+                                span.promotion-card__price__per /mo.
+                            .promotion-card__info
+                                span.promotion-card__info__text Includes all VPN features.
+                            .promotion-card__btn
+                                button(type="button").btn Sign Up
+
+                        li.promotion-card
+                            .promotion-card__period Two years
+                            .promotion-card__price
+                                div
+                                    span.promotion-card__price__cur $
+                                    span.promotion-card__price__number 2.91
+                                span.promotion-card__price__per /mo.
+                            .promotion-card__info
+                                div
+                                    span.promotion-card__info__sale $166.80
+                                    span.promotion-card__info__text $69.95 per two years
+                                span.promotion-card__info__save Save 58%*
+                            .promotion-card__btn
+                                button(type="button").btn Sign Up
+
+                        li.promotion-card
+                            .promotion-card__period Yearly
+                            .promotion-card__price
+                                span.promotion-card__price__cur $
+                                span.promotion-card__price__number 3.33
+                                span.promotion-card__price__per /mo.
+                            .promotion-card__info
+                                div
+                                    span.promotion-card__info__sale $166.80
+                                    span.promotion-card__info__text $39.95 per year
+                                span.promotion-card__info__save Save 52%*
+                            .promotion-card__btn
+                                button(type="button").btn Sign Up
+
+
+
+                    .promotion__brands
+                        h4 Ways to pay:
+                        .promotion__brands__images
+                            img(src="../images/brands/Object-1.png", alt="Visa")
+                            img(src="../images/brands/mc_vrt_pos.png", alt="Mastercard")
+                            img(src="../images/brands/amex_logo.png", alt="Amex")
+                            img(src="../images/brands/Object.png", alt="PayPal")
+                            img(src="../images/brands/Bitcoin.png", alt="Bitcoin")
+                            img(src="../images/brands/OK_Pay.png", alt="OK Pay")
+                            img(src="../images/brands/Object-2.png", alt="Amazon")
+                    .promotion__links
+                        a(href="#")
+                            | How to pay anonymously
+                            i.icon.icon--arrow
+                        a(href="#")
+                            | REDEEM GIFT CARD
+                            i.icon.icon--arrow
+
+            //  End Sign Up Promotions
+
             footer.footer
+                .container
+                    a(href="/").logo
+                        | Company Name
+                    .footer__columns
+                        .footer__columns-item
+                            .footer__columns-item__info
+                                h5.info-title Company
+                                nav.info-nav
+                                    a(href="#").info-nav__link About Us
+                                    a(href="#").info-nav__link Our Team
+                                    a(href="#").info-nav__link Careers
+                                    a(href="#").info-nav__link Press
+                                    a(href="#").info-nav__link In the Media
+                                    a(href="#").info-nav__link VPN Reviews
+                                    a(href="#").info-nav__link Companies We Support
+                                    a(href="#").info-nav__link Contact Us
+                                    a(href="#").info-nav__link Blog
+
+                        .footer__columns-item
+                            .footer__columns-item__info
+                                h5.info-title Programs
+                                nav.info-nav
+                                    a(href="#").info-nav__link Whitehat Security
+                                    a(href="#").info-nav__link Affiliates
+
+                            .footer__columns-item__info
+                                h5.info-title learn more
+                                nav.info-nav
+                                    a(href="#").info-nav__link VPN Encryption
+                                    a(href="#").info-nav__link Android VPN App
+                                    a(href="#").info-nav__link iOS VPN App
+                                    a(href="#").info-nav__link PIA Sitemap
+                                    a(href="#").info-nav__link Affiliates
+
+
+                        .footer__columns-item
+                            .footer__columns-item__info
+                                h5.info-title Legal
+                                nav.info-nav
+                                    a(href="#").info-nav__link Terms Of Service
+                                    a(href="#").info-nav__link Privacy Policy
+                                    a(href="#").info-nav__link DMCA Policy
+                                    a(href="#").info-nav__link Export Control Policy
+
+                        .footer__columns-item
+                            .footer__columns-item__info
+                                h5.info-title About
+                                article.info-article
+                                    p.mb-2 Private Internet Access is the leading VPN Service provider specializing in secure, encrypted VPN tunnels which create several layers of privacy and security providing you safety on the internet. Our service is backed by multiple gateways worldwide with access in 28+ countries, 44+ regions.
+                                    .footer__copyright
+                                        p.mb-2 Map data provided by Google.
+                                        p PC Mag Editor’s Choice award image reprinted with permission. © 2012 Ziff Davis, Inc. All Rights Reserved.
+                                        p PC Mag quote reprinted from www.pcmag.com with permission. © 2012 Ziff Davis, Inc. All Rights Reserved.
+                                        p.mt-2 © London Trust Media, Inc. All Rights Reserved.
+
+                            .footer__columns-item__info
+                                h5.info-title Social
+                                nav.social-nav
+                                    a(href="#").social-nav__link
+                                        i.icon.icon--fb
+                                    a(href="#").social-nav__link
+                                        i.icon.icon--twitter
+                                    a(href="#").social-nav__link
+                                        i.icon.icon--google
+                                    a(href="#").social-nav__link
+                                        i.icon.icon--in
+                                    a(href="#").social-nav__link
+                                        i.icon.icon--sl
+                                    a(href="#").social-nav__link
+                                        i.icon.icon--youtube

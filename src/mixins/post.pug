@@ -10,9 +10,9 @@ mixin post(image, text, author, date, tags)
                 |
                 |
                 span.info-author= author
-                | |
                 |
-                span.info-date= date
+                |
+                span.info-date= "| " + date
                 nav.info-tags
                   - const arr = tags
 

@@ -1,0 +1,168 @@
+.promotion {
+  background: linear-gradient(135deg, #3D4251 0%, #272B35 100%);
+  padding: 100px 0 57px;
+
+  h2 {
+    font-size: 48px;
+    line-height: 64px;
+    text-align: center;
+    letter-spacing: -0.5px;
+    margin-bottom: 40px;
+    color: $white;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    align-items: center;
+
+    .promotion-card {
+
+      &:nth-child(2n) {
+        padding: 59px 40px 59px;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  &-card {
+    background: $white;
+    padding: 48px 40px 40px;
+    text-align: center;
+    border-radius: 6px;
+    max-width: 380px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    border: 4px solid transparent;
+    transition: 300ms ease-in;
+
+    &:hover {
+      border-color:  $apple;
+    }
+
+    &__period {
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      position: relative;
+      padding-bottom: 14px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 24px;
+        height: 2px;
+        background: $apple;
+      }
+    }
+
+    &__price {
+      font-weight: 300;
+      font-size: 24px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid $porcelain;
+      margin-bottom: 27px;
+      display: flex;
+      justify-content: center;
+
+      &__cur {
+        margin-top: 7px;
+        margin-right: 5px;
+      }
+
+      &__number {
+        font-weight: 300;
+        font-size: 56px;
+        letter-spacing: -1.5px;
+        padding-bottom: 5px;
+      }
+
+      &__per {
+        margin-top: 35px;
+        margin-left: 5px;
+      }
+    }
+
+    &__info {
+      font-weight: 400;
+      font-size: 14px;
+      margin-bottom: 25px;
+      min-height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      &__sale {
+        color: $carnation;
+        text-decoration: line-through;
+        margin-right: 8px;
+      }
+
+      &__save {
+        font-weight: 700;
+        font-size: 14px;
+        display: block;
+        margin-top: 10px;
+      }
+    }
+
+    &__btn {
+
+      .btn {
+        min-width: 205px;
+      }
+    }
+  }
+
+  &__brands {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+
+    h4 {
+      color: $white;
+      margin-right: 30px;
+    }
+
+    &__images {
+      display: flex;
+      align-items: center;
+
+      img + img {
+        margin-left: 30px;
+      }
+    }
+  }
+
+  &__links {
+    text-align: center;
+    margin-top: 10px;
+
+    a + a {
+      margin-left: 44px;
+    }
+
+    & > a {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: $apple;
+      display: inline-flex;
+      align-items: center;
+
+      .icon {
+        margin-left: 15px;
+      }
+    }
+  }
+}
