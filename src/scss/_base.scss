@@ -205,12 +205,14 @@ ul {
 .social-nav {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  column-gap: 30px;
+
+  @include media-breakpoint-down(lg) {
+    gap: 32px 24px;
+  }
 
   & > a {
     display: inline-block;
-  }
-
-  a + a {
-    margin-left: 32px;
   }
 }

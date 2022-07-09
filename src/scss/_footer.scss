@@ -5,10 +5,24 @@
   line-height: 22px;
   color: $regent-gray;
 
+  @include media-breakpoint-down(md) {
+    padding: 44px 0 50px;
+
+    .container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
   .logo {
     font-size: 27px;
     margin-bottom: 58px;
     display: inline-block;
+
+    @include media-breakpoint-down(md) {
+      font-size: 18px;
+    }
+
   }
 
   &__columns {
@@ -16,10 +30,31 @@
     grid-template-columns: repeat(3, 1fr) 3fr;
     align-items: baseline;
 
+    @include media-breakpoint-down(lg) {
+      grid-template-columns: repeat(2,1fr);
+      row-gap: 35px;
+    }
+
     &-item {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
+      &--social {
+        grid-column: 4;
+
+        @include media-breakpoint-down(lg) {
+          grid-column: auto;
+        }
+      }
+
+      @include media-breakpoint-down(lg) {
+
+        &--about {
+          grid-column: 1/3;
+          grid-row: 3;
+        }
+      }
 
       &__info {
         margin-bottom: 40px;

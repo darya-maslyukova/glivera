@@ -25,9 +25,16 @@ html(lang="en")
 
             .container
                 // Header
-                header.header.container
+                header.header
+
+                    .menu-toggle
+                        button.btn.btn--no-styles.menu-toggle__btn
+                            span
+                            span
+                            span
+
                     a(href="/").logo
-                            | Company Name
+                        | Company Name
                     ul.top-menu
                         li.top-menu__item.top-menu__item--has-submenu
                             a(href="#") Why Us
@@ -37,8 +44,9 @@ html(lang="en")
                             a(href="#") Support
                         li.top-menu__item.top-menu__item--has-submenu
                             a(href="#") Resources
+
                     .header-btns
-                        button(type="button").btn Log In
+                        button(type="button").btn.header-btns--log-in Log In
                         button(type="button").btn.btn--bg.btn--lg Get Started
                 // End Header
 
@@ -48,7 +56,7 @@ html(lang="en")
                         .blog-post__images
                             .blog-post__image.image-mobile(style="background-image: url('../pictures/post-main.png')")
                             .blog-post__image.image-tablet(style="background-image: url('../pictures/post-main@2x.png')")
-                            .blog-post__image(style="background-image: url('../pictures/post-main@3x.png')")
+                            .blog-post__image.image-dekstop(style="background-image: url('../pictures/post-main@3x.png')")
 
                         .blog-post__article
                             .blog-post__title TV Addons: Legal battle against Canadian media giants demonstrates severe consequences facing developers accused of copyright infringement
@@ -207,10 +215,10 @@ html(lang="en")
                             img(src="../images/brands/OK_Pay.png", alt="OK Pay")
                             img(src="../images/brands/Object-2.png", alt="Amazon")
                     .promotion__links
-                        a(href="#")
+                        a(href="#").promotion__links__item
                             | How to pay anonymously
                             i.icon.icon--arrow
-                        a(href="#")
+                        a(href="#").promotion__links__item
                             | REDEEM GIFT CARD
                             i.icon.icon--arrow
 
@@ -261,7 +269,7 @@ html(lang="en")
                                     a(href="#").info-nav__link DMCA Policy
                                     a(href="#").info-nav__link Export Control Policy
 
-                        .footer__columns-item
+                        .footer__columns-item.footer__columns-item--about
                             .footer__columns-item__info
                                 h5.info-title About
                                 article.info-article
@@ -272,6 +280,7 @@ html(lang="en")
                                         p PC Mag quote reprinted from www.pcmag.com with permission. © 2012 Ziff Davis, Inc. All Rights Reserved.
                                         p.mt-2 © London Trust Media, Inc. All Rights Reserved.
 
+                        .footer__columns-item.footer__columns-item--social
                             .footer__columns-item__info
                                 h5.info-title Social
                                 nav.social-nav
@@ -287,3 +296,6 @@ html(lang="en")
                                         i.icon.icon--sl
                                     a(href="#").social-nav__link
                                         i.icon.icon--youtube
+
+        block scripts
+            script(src='js/main.min.js')

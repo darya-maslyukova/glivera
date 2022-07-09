@@ -57,8 +57,17 @@ h4 {
   min-height: calc(100vh - 600px);
 }
 
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .inner-container {
   max-width: 1200px;
+}
+
+img {
+  max-width: 100%;
 }
 
 .two-columns {
@@ -66,13 +75,44 @@ h4 {
   grid-template-columns: 1fr 400px;
   padding-bottom: 120px;
 
+  @include media-breakpoint-down(xl) {
+    grid-template-columns: 2fr min(300px);
+  }
+
+  @include media-breakpoint-down(lg) {
+    grid-template-columns: auto;
+    padding: 0 10px 70px;
+
+    .search {
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+  }
+
   &__left {
     padding-right: 60px;
     border-right: 1px solid $porcelain;
+
+    @include media-breakpoint-down(xl) {
+      padding-right: 30px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      padding: 0;
+      border: 0;
+    }
   }
 
   &__right {
     padding-left: 59px;
+
+    @include media-breakpoint-down(xl) {
+      padding-left: 30px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      padding: 0;
+    }
   }
 }
 
@@ -86,11 +126,11 @@ h4 {
  .menu-toggle {
    position: relative;
    z-index: 1;
-   width: 34px;
-   height: 22px;
+   width: 24px;
+   height: 16px;
    display: none;
 
-   @include media-breakpoint-down(md) {
+   @include media-breakpoint-down(lg) {
      display: block;
    }
 
@@ -118,7 +158,7 @@ h4 {
        width: 100%;
        opacity: 1;
        left: 0;
-       background: $white;
+       background: $charade;
        transform: rotate(0deg);
        transition: 0.3s ease-in-out;
 
@@ -127,11 +167,11 @@ h4 {
        }
 
        &:nth-child(2) {
-         top: 10px;
+         top: 7px;
        }
 
        &:nth-child(3) {
-         top: 20px;
+         top: 14px;
        }
      }
 

@@ -8,21 +8,10 @@
     min-height: 180px;
     border-bottom: 1px solid $porcelain;
 
-    &:nth-child(3n + 2) {
-      padding-bottom: 61px;
-    }
-
-    &:nth-child(3n + 3) {
-
-      .blog-post__article {
-        padding-left: 20px;
-      }
-
-      .info-tags {
-        font-weight: 500;
-        font-size: 14px;
-        letter-spacing: 0.8px;
-      }
+    @include media-breakpoint-down(md) {
+      grid-template-columns: auto;
+      grid-auto-rows: 200px 1fr;
+      margin-bottom: 20px;
     }
 
     &--main {
@@ -32,17 +21,42 @@
       border: 1px solid $iron;
       border-radius: 6px;
       padding: 0;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 8px 16px rgba($black, 0.1);
+
+      @include media-breakpoint-down(xl) {
+        grid-template-columns: minmax(335px, 1fr) 2fr;
+      }
+
+      @include media-breakpoint-down(lg) {
+        grid-template-columns: minmax(280px, 1fr) 2fr;
+        min-height: auto;
+      }
+
+      @include media-breakpoint-down(md) {
+        grid-template-columns: auto;
+        grid-auto-rows: 223px 1fr;
+        margin-bottom: 40px;
+      }
 
       .blog-post {
 
         &__image {
           border-radius: 6px 0 0 6px;
+
+          @include media-breakpoint-down(md) {
+            border-radius: 6px 6px 0 0 ;
+          }
+
         }
 
         &__article {
           padding: 60px 60px 45px;
           justify-content: space-between;
+
+          @include media-breakpoint-down(lg) {
+            padding: 30px 30px 17px;
+            margin-top: 0;
+          }
         }
       }
     }
@@ -54,15 +68,17 @@
       width: 100%;
       height: 100%;
 
-      @media screen and (max-width: 1200px) {
-        display: none;
-      }
+      &.image-dekstop {
 
+        @include media-breakpoint-down(xl){
+          display: none;
+        }
+      }
 
       &.image-tablet {
         display: none;
 
-        @media screen and (min-width: 601px) and (max-width: 1200px) {
+        @include media-breakpoint-between (md, xl) {
           display: block;
         }
       }
@@ -70,33 +86,41 @@
       &.image-mobile {
         display: none;
 
-        @media screen and (max-width: 600px) {
+       @include media-breakpoint-down(md) {
           display: block;
         }
       }
-
-      @media screen and (min-width: 1201px) {
-        display: block;
-      }
-
     }
 
     &__btn {
       text-align: center;
       margin-top: 40px;
+
+      @include media-breakpoint-down(lg) {
+        margin: 60px 0 70px;
+
+        .btn {
+          min-width: 100%;
+        }
+      }
     }
 
     &__article {
       padding-left: 40px;
       display: flex;
       flex-direction: column;
+
+      @include media-breakpoint-down(md ) {
+        padding-left: 0;
+        margin-top: 16px;
+      }
     }
 
     &__title {
       font-weight: 300;
       font-size: 24px;
       line-height: 34px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     &__info {
@@ -114,6 +138,7 @@
     .info-tags {
       font-weight: 400;
       font-size: 12px;
+      line-height: 16px;
       letter-spacing: 0.5px;
       text-transform: uppercase;
       color: $apple;
@@ -139,6 +164,27 @@
         margin-right: 10px;
       }
     }
+
+    @include media-breakpoint-up(lg) {
+
+      &:nth-child(3n + 2) {
+        padding-bottom: 61px;
+      }
+
+      &:nth-child(3n + 3) {
+
+        .blog-post__article {
+          padding-left: 20px;
+        }
+
+        .info-tags {
+          font-weight: 500;
+          font-size: 14px;
+          letter-spacing: 0.8px;
+        }
+      }
+    }
+
   }
 
   &-filter {
@@ -154,6 +200,11 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: 40px;
+    overflow-x: scroll;
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
 
     &__tags {
       display: flex;
@@ -163,6 +214,10 @@
     .tags-nav {
       display: flex;
       margin-left: 35px;
+
+      @include media-breakpoint-down(xl) {
+        margin-left: 25px;
+      }
 
       & > a {
         font-weight: 500;
@@ -175,9 +230,14 @@
 
     a + a {
       margin-left: 35px;
+
+      @include media-breakpoint-down(xl) {
+        margin-left: 25px;
+      }
     }
 
     &__links {
+      margin-left: 25px;
 
       & > a {
         font-weight: 500;

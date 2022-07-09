@@ -11,6 +11,16 @@
   justify-content: center;
   min-height: 40px;
   z-index: 1;
+  padding: 10px 5px;
+
+  @include media-breakpoint-down(md) {
+    padding-bottom: 4px;
+
+    .container {
+      padding-left: 15px;
+      padding-right: 12px;
+    }
+  }
 
   .close {
     position: absolute;
@@ -36,12 +46,33 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    li + li {
-      margin-left: 32px;
-    }
+    flex-wrap: wrap;
 
     &__item {
+
+      @include media-breakpoint-down(md) {
+        flex-basis: 50%;
+        margin-bottom: 8px;
+
+        &:first-child,
+        &:last-child {
+          order: -1;
+        }
+
+        &:last-child,
+        &:nth-last-child(2){
+          text-align: right;
+          padding-right: 30px;
+        }
+      }
+
+      & + .notification__list__item {
+        margin-left: 32px;
+
+        @include media-breakpoint-down(md) {
+          margin-left: 0;
+        }
+      }
 
       &--color {
         color: $pizazz;

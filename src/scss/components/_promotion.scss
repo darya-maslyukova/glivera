@@ -2,6 +2,18 @@
   background: linear-gradient(135deg, #3D4251 0%, #272B35 100%);
   padding: 100px 0 57px;
 
+  @include media-breakpoint-down(lg) {
+    padding: 60px 0 44px;
+  }
+
+  @include media-breakpoint-down(md) {
+
+    .container {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
   h2 {
     font-size: 48px;
     line-height: 64px;
@@ -9,6 +21,12 @@
     letter-spacing: -0.5px;
     margin-bottom: 40px;
     color: $white;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 32px;
+      line-height: 44px;
+      padding: 0 30px;
+    }
   }
 
   &__list {
@@ -17,7 +35,23 @@
     column-gap: 20px;
     align-items: center;
 
+    @include media-breakpoint-down(lg) {
+      grid-template-columns: minmax(310px, 1fr);
+      row-gap: 20px;
+      justify-content: center;
+    }
+
     .promotion-card {
+
+      @include media-breakpoint-down(lg) {
+        margin: 0 auto;
+        max-width: 340px;
+        width: 100%;
+      }
+
+      @include media-breakpoint-down(sm) {
+        max-width: 100%;
+      }
 
       &:nth-child(2n) {
         padding: 59px 40px 59px;
@@ -127,6 +161,10 @@
     justify-content: center;
     margin-top: 32px;
 
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+    }
+
     h4 {
       color: $white;
       margin-right: 30px;
@@ -135,9 +173,11 @@
     &__images {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
+      column-gap: 25px;
 
-      img + img {
-        margin-left: 30px;
+      @include media-breakpoint-down(lg) {
+        justify-content: center;
       }
     }
   }
@@ -146,11 +186,21 @@
     text-align: center;
     margin-top: 10px;
 
-    a + a {
-      margin-left: 44px;
+    @include media-breakpoint-down(lg) {
+      margin-top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    & > a {
+    @include media-breakpoint-up(lg) {
+
+      &__item + .promotion__links__item {
+        margin-left: 44px;
+      }
+    }
+
+    &__item {
       font-weight: 500;
       font-size: 14px;
       line-height: 18px;
@@ -159,6 +209,10 @@
       color: $apple;
       display: inline-flex;
       align-items: center;
+
+      @include media-breakpoint-down(lg) {
+        margin-top: 40px;
+      }
 
       .icon {
         margin-left: 15px;

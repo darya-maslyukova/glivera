@@ -24,7 +24,10 @@
       <!--  End Notification-->
       <div class="container">
         <!-- Header-->
-        <header class="header container"><a class="logo" href="/">Company Name</a>
+        <header class="header">
+          <div class="menu-toggle">
+            <button class="btn btn--no-styles menu-toggle__btn"><span></span><span></span><span></span></button>
+          </div><a class="logo" href="/">Company Name</a>
           <ul class="top-menu">
             <li class="top-menu__item top-menu__item--has-submenu"><a href="#">Why Us</a></li>
             <li class="top-menu__item"><a href="#">VPN Apps</a></li>
@@ -32,7 +35,7 @@
             <li class="top-menu__item top-menu__item--has-submenu"><a href="#">Resources</a></li>
           </ul>
           <div class="header-btns">
-            <button class="btn" type="button">Log In</button>
+            <button class="btn header-btns--log-in" type="button">Log In</button>
             <button class="btn btn--bg btn--lg" type="button">Get Started</button>
           </div>
         </header>
@@ -43,7 +46,7 @@
             <div class="blog-post__images">
               <div class="blog-post__image image-mobile" style="background-image: url('../pictures/post-main.png')"></div>
               <div class="blog-post__image image-tablet" style="background-image: url('../pictures/post-main@2x.png')"></div>
-              <div class="blog-post__image" style="background-image: url('../pictures/post-main@3x.png')"></div>
+              <div class="blog-post__image image-dekstop" style="background-image: url('../pictures/post-main@3x.png')"></div>
             </div>
             <div class="blog-post__article">
               <div class="blog-post__title">TV Addons: Legal battle against Canadian media giants demonstrates severe consequences facing developers accused of copyright infringement</div>
@@ -243,7 +246,7 @@
             <h4>Ways to pay:</h4>
             <div class="promotion__brands__images"><img src="../images/brands/Object-1.png" alt="Visa"><img src="../images/brands/mc_vrt_pos.png" alt="Mastercard"><img src="../images/brands/amex_logo.png" alt="Amex"><img src="../images/brands/Object.png" alt="PayPal"><img src="../images/brands/Bitcoin.png" alt="Bitcoin"><img src="../images/brands/OK_Pay.png" alt="OK Pay"><img src="../images/brands/Object-2.png" alt="Amazon"></div>
           </div>
-          <div class="promotion__links"><a href="#">How to pay anonymously<i class="icon icon--arrow"></i></a><a href="#">REDEEM GIFT CARD<i class="icon icon--arrow"></i></a></div>
+          <div class="promotion__links"><a class="promotion__links__item" href="#">How to pay anonymously<i class="icon icon--arrow"></i></a><a class="promotion__links__item" href="#">REDEEM GIFT CARD<i class="icon icon--arrow"></i></a></div>
         </div>
       </section>
       <!--  End Sign Up Promotions-->
@@ -272,7 +275,7 @@
                 <nav class="info-nav"><a class="info-nav__link" href="#">Terms Of Service</a><a class="info-nav__link" href="#">Privacy Policy</a><a class="info-nav__link" href="#">DMCA Policy</a><a class="info-nav__link" href="#">Export Control Policy</a></nav>
               </div>
             </div>
-            <div class="footer__columns-item">
+            <div class="footer__columns-item footer__columns-item--about">
               <div class="footer__columns-item__info">
                 <h5 class="info-title">About</h5>
                 <article class="info-article">
@@ -285,6 +288,8 @@
                   </div>
                 </article>
               </div>
+            </div>
+            <div class="footer__columns-item footer__columns-item--social">
               <div class="footer__columns-item__info">
                 <h5 class="info-title">Social</h5>
                 <nav class="social-nav"><a class="social-nav__link" href="#"><i class="icon icon--fb"></i></a><a class="social-nav__link" href="#"><i class="icon icon--twitter"></i></a><a class="social-nav__link" href="#"><i class="icon icon--google"></i></a><a class="social-nav__link" href="#"><i class="icon icon--in"></i></a><a class="social-nav__link" href="#"><i class="icon icon--sl"></i></a><a class="social-nav__link" href="#"><i class="icon icon--youtube"></i></a></nav>
@@ -294,5 +299,6 @@
         </div>
       </footer>
     </div>
+    <script src="js/main.min.js"></script>
   </body>
 </html>
