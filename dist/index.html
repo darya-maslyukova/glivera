@@ -2,8 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glivera</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/core.min.css">
   </head>
   <body>
@@ -73,7 +74,7 @@
           <!-- End Tags Filter-->
           <!--  Blog Posts-->
           <div class="two-columns blog-posts">
-            <!-- ---------------- Left Column-->
+            <!-- Left Column-->
             <div class="two-columns__left">
               <h2>Recent posts</h2>
                             <div class="blog-post">
@@ -170,8 +171,8 @@
                 <button class="btn btn--xl" type="button">Older Posts</button>
               </div>
             </div>
-            <!-- ---------------- Right Column-->
-            <div class="two-columns__right">
+            <!-- Right Column-->
+            <aside class="two-columns__right">
               <form class="search">
                 <label for="blog_search"></label>
                 <input type="search" placeholder="Search blog" name="q" id="blog_search">
@@ -190,18 +191,18 @@
               <div class="sidebar-item">
                 <h3 class="sidebar-item__title"><i class="icon icon--recent"></i>Popular posts</h3>
                 <ul class="list">
-                  <li><a href="#">The Gift of Privacy</a></li>
-                  <li><a href="#">UK High Court Censors Many Links To Popcorn Time: Useless, Dangerous Gesture</a></li>
-                  <li><a href="#">About the PIA Client Security and VPN Security in General</a></li>
-                  <li><a href="#">A Private Net Is Just As Fundamental A Right As Freedom Of Speech</a></li>
-                  <li><a href="#">Wiretapping Today Just Doesn’t Mean What The Word Meant In The 1990s, So Don’t Fall For That Lie</a></li>
+                  <li class="list__item"><a href="#">The Gift of Privacy</a></li>
+                  <li class="list__item"><a href="#">UK High Court Censors Many Links To Popcorn Time: Useless, Dangerous Gesture</a></li>
+                  <li class="list__item"><a href="#">About the PIA Client Security and VPN Security in General</a></li>
+                  <li class="list__item"><a href="#">A Private Net Is Just As Fundamental A Right As Freedom Of Speech</a></li>
+                  <li class="list__item"><a href="#">Wiretapping Today Just Doesn’t Mean What The Word Meant In The 1990s, So Don’t Fall For That Lie</a></li>
                 </ul>
               </div>
               <div class="sidebar-item sidebar-item--no-border"><img src="../pictures/banner.png" alt="Sidebar banner"></div>
               <div class="sidebar-item sidebar-item--no-border mt-5">
                 <h3 class="sidebar-item__title mb-2">Tag Cloud</h3><img src="../pictures/tags.png" alt="Sidebar tags">
               </div>
-            </div>
+            </aside>
           </div>
           <!--  End Blog Posts-->
           <!--  Sign Up Promotion-->
@@ -219,16 +220,14 @@
                 <button class="btn" type="button">Sign Up</button>
               </div>
             </li>
-            <li class="promotion-card">
+            <li class="promotion-card promotion-card--active">
               <div class="promotion-card__period">Two years</div>
-              <div class="promotion-card__price">
-                <div><span class="promotion-card__price__cur">$</span><span class="promotion-card__price__number">2.91</span></div><span class="promotion-card__price__per">/mo.</span>
-              </div>
+              <div class="promotion-card__price"><span class="promotion-card__price__cur">$</span><span class="promotion-card__price__number">2.91</span><span class="promotion-card__price__per">/mo.</span></div>
               <div class="promotion-card__info">
                 <div><span class="promotion-card__info__sale">$166.80</span><span class="promotion-card__info__text">$69.95 per two years</span></div><span class="promotion-card__info__save">Save 58%*</span>
               </div>
               <div class="promotion-card__btn">
-                <button class="btn" type="button">Sign Up</button>
+                <button class="btn btn--bg" type="button">Sign Up</button>
               </div>
             </li>
             <li class="promotion-card">
@@ -250,55 +249,55 @@
         </div>
       </section>
       <!--  End Sign Up Promotions-->
-      <footer class="footer">
-        <div class="container"><a class="logo" href="/">Company Name</a>
-          <div class="footer__columns">
-            <div class="footer__columns-item">
-              <div class="footer__columns-item__info">
-                <h5 class="info-title">Company</h5>
-                <nav class="info-nav"><a class="info-nav__link" href="#">About Us</a><a class="info-nav__link" href="#">Our Team</a><a class="info-nav__link" href="#">Careers</a><a class="info-nav__link" href="#">Press</a><a class="info-nav__link" href="#">In the Media</a><a class="info-nav__link" href="#">VPN Reviews</a><a class="info-nav__link" href="#">Companies We Support</a><a class="info-nav__link" href="#">Contact Us</a><a class="info-nav__link" href="#">Blog</a></nav>
-              </div>
+    </div>
+    <footer class="footer">
+      <div class="container"><a class="logo" href="/">Company Name</a>
+        <div class="footer__columns">
+          <div class="footer__columns-item">
+            <div class="footer__columns-item__info">
+              <h5 class="info-title">Company</h5>
+              <nav class="info-nav"><a class="info-nav__link" href="#">About Us</a><a class="info-nav__link" href="#">Our Team</a><a class="info-nav__link" href="#">Careers</a><a class="info-nav__link" href="#">Press</a><a class="info-nav__link" href="#">In the Media</a><a class="info-nav__link" href="#">VPN Reviews</a><a class="info-nav__link" href="#">Companies We Support</a><a class="info-nav__link" href="#">Contact Us</a><a class="info-nav__link" href="#">Blog</a></nav>
             </div>
-            <div class="footer__columns-item">
-              <div class="footer__columns-item__info">
-                <h5 class="info-title">Programs</h5>
-                <nav class="info-nav"><a class="info-nav__link" href="#">Whitehat Security</a><a class="info-nav__link" href="#">Affiliates</a></nav>
-              </div>
-              <div class="footer__columns-item__info">
-                <h5 class="info-title">learn more</h5>
-                <nav class="info-nav"><a class="info-nav__link" href="#">VPN Encryption</a><a class="info-nav__link" href="#">Android VPN App</a><a class="info-nav__link" href="#">iOS VPN App</a><a class="info-nav__link" href="#">PIA Sitemap</a><a class="info-nav__link" href="#">Affiliates</a></nav>
-              </div>
+          </div>
+          <div class="footer__columns-item">
+            <div class="footer__columns-item__info">
+              <h5 class="info-title">Programs</h5>
+              <nav class="info-nav"><a class="info-nav__link" href="#">Whitehat Security</a><a class="info-nav__link" href="#">Affiliates</a></nav>
             </div>
-            <div class="footer__columns-item">
-              <div class="footer__columns-item__info">
-                <h5 class="info-title">Legal</h5>
-                <nav class="info-nav"><a class="info-nav__link" href="#">Terms Of Service</a><a class="info-nav__link" href="#">Privacy Policy</a><a class="info-nav__link" href="#">DMCA Policy</a><a class="info-nav__link" href="#">Export Control Policy</a></nav>
-              </div>
+            <div class="footer__columns-item__info">
+              <h5 class="info-title">learn more</h5>
+              <nav class="info-nav"><a class="info-nav__link" href="#">VPN Encryption</a><a class="info-nav__link" href="#">Android VPN App</a><a class="info-nav__link" href="#">iOS VPN App</a><a class="info-nav__link" href="#">PIA Sitemap</a><a class="info-nav__link" href="#">Affiliates</a></nav>
             </div>
-            <div class="footer__columns-item footer__columns-item--about">
-              <div class="footer__columns-item__info">
-                <h5 class="info-title">About</h5>
-                <article class="info-article">
-                  <p class="mb-2">Private Internet Access is the leading VPN Service provider specializing in secure, encrypted VPN tunnels which create several layers of privacy and security providing you safety on the internet. Our service is backed by multiple gateways worldwide with access in 28+ countries, 44+ regions.</p>
-                  <div class="footer__copyright">
-                    <p class="mb-2">Map data provided by Google.</p>
-                    <p>PC Mag Editor’s Choice award image reprinted with permission. © 2012 Ziff Davis, Inc. All Rights Reserved.</p>
-                    <p>PC Mag quote reprinted from www.pcmag.com with permission. © 2012 Ziff Davis, Inc. All Rights Reserved.</p>
-                    <p class="mt-2">© London Trust Media, Inc. All Rights Reserved.</p>
-                  </div>
-                </article>
-              </div>
+          </div>
+          <div class="footer__columns-item">
+            <div class="footer__columns-item__info">
+              <h5 class="info-title">Legal</h5>
+              <nav class="info-nav"><a class="info-nav__link" href="#">Terms Of Service</a><a class="info-nav__link" href="#">Privacy Policy</a><a class="info-nav__link" href="#">DMCA Policy</a><a class="info-nav__link" href="#">Export Control Policy</a></nav>
             </div>
-            <div class="footer__columns-item footer__columns-item--social">
-              <div class="footer__columns-item__info">
-                <h5 class="info-title">Social</h5>
-                <nav class="social-nav"><a class="social-nav__link" href="#"><i class="icon icon--fb"></i></a><a class="social-nav__link" href="#"><i class="icon icon--twitter"></i></a><a class="social-nav__link" href="#"><i class="icon icon--google"></i></a><a class="social-nav__link" href="#"><i class="icon icon--in"></i></a><a class="social-nav__link" href="#"><i class="icon icon--sl"></i></a><a class="social-nav__link" href="#"><i class="icon icon--youtube"></i></a></nav>
+          </div>
+          <div class="footer__columns-item footer__columns-item--about">
+            <div class="footer__columns-item__info">
+              <h5 class="info-title">About</h5>
+              <div class="info-article">
+                <p class="mb-2">Private Internet Access is the leading VPN Service provider specializing in secure, encrypted VPN tunnels which create several layers of privacy and security providing you safety on the internet. Our service is backed by multiple gateways worldwide with access in 28+ countries, 44+ regions.</p>
+                <div class="footer__copyright">
+                  <p class="mb-2">Map data provided by Google.</p>
+                  <p>PC Mag Editor’s Choice award image reprinted with permission. © 2012 Ziff Davis, Inc. All Rights Reserved.</p>
+                  <p>PC Mag quote reprinted from www.pcmag.com with permission. © 2012 Ziff Davis, Inc. All Rights Reserved.</p>
+                  <p class="mt-2">© London Trust Media, Inc. All Rights Reserved.</p>
+                </div>
               </div>
             </div>
           </div>
+          <div class="footer__columns-item footer__columns-item--social">
+            <div class="footer__columns-item__info">
+              <h5 class="info-title">Social</h5>
+              <nav class="social-nav"><a class="social-nav__link" href="#"><i class="icon icon--fb"></i></a><a class="social-nav__link" href="#"><i class="icon icon--twitter"></i></a><a class="social-nav__link" href="#"><i class="icon icon--google"></i></a><a class="social-nav__link" href="#"><i class="icon icon--in"></i></a><a class="social-nav__link" href="#"><i class="icon icon--sl"></i></a><a class="social-nav__link" href="#"><i class="icon icon--youtube"></i></a></nav>
+            </div>
+          </div>
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
     <script src="js/main.min.js"></script>
   </body>
 </html>

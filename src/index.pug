@@ -2,8 +2,9 @@ doctype html
 html(lang="en")
     head
         meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Glivera
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="css/core.min.css")
     body
         .wrapper
@@ -94,7 +95,7 @@ html(lang="en")
                     //  Blog Posts
                     .two-columns.blog-posts
 
-                        // ---------------- Left Column
+                        // Left Column
                         .two-columns__left
                             h2 Recent posts
 
@@ -108,8 +109,9 @@ html(lang="en")
 
                             .blog-post__btn
                                 button(type="button").btn.btn--xl Older Posts
-                        // ---------------- Right Column
-                        .two-columns__right
+
+                        // Right Column
+                        aside.two-columns__right
                             form.search
                                 label(for="blog_search")
                                 input(type="search" placeholder="Search blog" name="q" id="blog_search")
@@ -137,15 +139,15 @@ html(lang="en")
                                     i.icon.icon--recent
                                     | Popular posts
                                 ul.list
-                                    li
+                                    li.list__item
                                         a(href="#") The Gift of Privacy
-                                    li
+                                    li.list__item
                                         a(href="#") UK High Court Censors Many Links To Popcorn Time: Useless, Dangerous Gesture
-                                    li
+                                    li.list__item
                                         a(href="#") About the PIA Client Security and VPN Security in General
-                                    li
+                                    li.list__item
                                         a(href="#") A Private Net Is Just As Fundamental A Right As Freedom Of Speech
-                                    li
+                                    li.list__item
                                         a(href="#") Wiretapping Today Just Doesn’t Mean What The Word Meant In The 1990s, So Don’t Fall For That Lie
 
                             .sidebar-item.sidebar-item--no-border
@@ -173,12 +175,11 @@ html(lang="en")
                             .promotion-card__btn
                                 button(type="button").btn Sign Up
 
-                        li.promotion-card
+                        li.promotion-card.promotion-card--active
                             .promotion-card__period Two years
                             .promotion-card__price
-                                div
-                                    span.promotion-card__price__cur $
-                                    span.promotion-card__price__number 2.91
+                                span.promotion-card__price__cur $
+                                span.promotion-card__price__number 2.91
                                 span.promotion-card__price__per /mo.
                             .promotion-card__info
                                 div
@@ -186,7 +187,7 @@ html(lang="en")
                                     span.promotion-card__info__text $69.95 per two years
                                 span.promotion-card__info__save Save 58%*
                             .promotion-card__btn
-                                button(type="button").btn Sign Up
+                                button(type="button").btn.btn--bg Sign Up
 
                         li.promotion-card
                             .promotion-card__period Yearly
@@ -224,7 +225,7 @@ html(lang="en")
 
             //  End Sign Up Promotions
 
-            footer.footer
+        footer.footer
                 .container
                     a(href="/").logo
                         | Company Name
@@ -272,7 +273,7 @@ html(lang="en")
                         .footer__columns-item.footer__columns-item--about
                             .footer__columns-item__info
                                 h5.info-title About
-                                article.info-article
+                                .info-article
                                     p.mb-2 Private Internet Access is the leading VPN Service provider specializing in secure, encrypted VPN tunnels which create several layers of privacy and security providing you safety on the internet. Our service is backed by multiple gateways worldwide with access in 28+ countries, 44+ regions.
                                     .footer__copyright
                                         p.mb-2 Map data provided by Google.
@@ -296,6 +297,7 @@ html(lang="en")
                                         i.icon.icon--sl
                                     a(href="#").social-nav__link
                                         i.icon.icon--youtube
+
 
         block scripts
             script(src='js/main.min.js')
